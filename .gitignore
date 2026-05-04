@@ -1,1 +1,3 @@
 .DS_Store
+data/raw/title.episode.tsv
+data/raw/title.ratings.tsv
