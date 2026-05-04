@@ -1,0 +1,89 @@
+============================================================
+REGRESSION 1: Scientific Density ~ Google Trends Interest
+Does mainstream interest predict less scientific content?
+============================================================
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:        avg_sci_density   R-squared:                       0.327
+Model:                            OLS   Adj. R-squared:                  0.243
+Method:                 Least Squares   F-statistic:                     3.891
+Date:                Mon, 04 May 2026   Prob (F-statistic):             0.0840
+Time:                        21:50:07   Log-Likelihood:                 8.8039
+No. Observations:                  10   AIC:                            -13.61
+Df Residuals:                       8   BIC:                            -13.00
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+=======================================================================================
+                          coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------------
+Intercept               0.5318      0.083      6.389      0.000       0.340       0.724
+avg_search_interest    -0.0029      0.001     -1.973      0.084      -0.006       0.000
+==============================================================================
+Omnibus:                        1.353   Durbin-Watson:                   0.995
+Prob(Omnibus):                  0.508   Jarque-Bera (JB):                0.557
+Skew:                          -0.565   Prob(JB):                        0.757
+Kurtosis:                       2.758   Cond. No.                         135.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+============================================================
+REGRESSION 2: IMDb Rating ~ Scientific Density
+Did audiences reward or punish scientific content?
+============================================================
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:            imdb_rating   R-squared:                       0.021
+Model:                            OLS   Adj. R-squared:                  0.017
+Method:                 Least Squares   F-statistic:                     4.886
+Date:                Mon, 04 May 2026   Prob (F-statistic):             0.0281
+Time:                        21:50:07   Log-Likelihood:                -132.04
+No. Observations:                 228   AIC:                             268.1
+Df Residuals:                     226   BIC:                             274.9
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+=============================================================================================
+                                coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------------------
+Intercept                     7.7812      0.044    178.779      0.000       7.695       7.867
+sci_density_per_100_words     0.1938      0.088      2.210      0.028       0.021       0.367
+==============================================================================
+Omnibus:                        1.300   Durbin-Watson:                   1.230
+Prob(Omnibus):                  0.522   Jarque-Bera (JB):                1.285
+Skew:                           0.181   Prob(JB):                        0.526
+Kurtosis:                       2.932   Cond. No.                         3.52
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+============================================================
+REGRESSION 3: Scientific Density ~ Season Number
+Is the decline in scientific language statistically significant over time?
+============================================================
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:        avg_sci_density   R-squared:                       0.597
+Model:                            OLS   Adj. R-squared:                  0.547
+Method:                 Least Squares   F-statistic:                     11.87
+Date:                Mon, 04 May 2026   Prob (F-statistic):            0.00875
+Time:                        21:50:07   Log-Likelihood:                 11.372
+No. Observations:                  10   AIC:                            -18.74
+Df Residuals:                       8   BIC:                            -18.14
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept      0.5643      0.059      9.521      0.000       0.428       0.701
+season        -0.0329      0.010     -3.446      0.009      -0.055      -0.011
+==============================================================================
+Omnibus:                        0.101   Durbin-Watson:                   1.663
+Prob(Omnibus):                  0.951   Jarque-Bera (JB):                0.315
+Skew:                           0.099   Prob(JB):                        0.854
+Kurtosis:                       2.153   Cond. No.                         13.7
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
