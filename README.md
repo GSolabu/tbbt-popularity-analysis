@@ -94,10 +94,10 @@ tbbt-popularity-analysis/
 - pip or conda package manager
 
 ### Step 1 — Install dependencies
-```bash
+
 pip install pandas numpy matplotlib seaborn requests beautifulsoup4 statsmodels jupyter spacy
 python -m spacy download en_core_web_sm
-```
+
 
 ### Step 2 — Download IMDb source files
 Download the following two files from [datasets.imdbws.com](https://datasets.imdbws.com) and save them to `data/raw/`:
@@ -105,13 +105,13 @@ Download the following two files from [datasets.imdbws.com](https://datasets.imd
 - `title.ratings.tsv`
 
 ### Step 3 — Run the pipeline in order
-```bash
+
 python scripts/scrape_tbbt_transcripts.py
 python scripts/scrape_imdb_ratings.py
 python scripts/clean_and_merge_data.py
 python scripts/scientific_language_analysis.py
 python scripts/visualisations_and_regression.py
-```
+
 
 ### Step 4 — View the blog post
 ```bash
